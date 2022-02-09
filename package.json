@@ -11,7 +11,7 @@
   "scripts": {
     "pipeline": "yarn version --patch",
     "postversion": "git push --set-upstream origin master && git push --tags",
-    "publish:release": "yarn pipeline && npm publish"
+    "publish:release": "yarn pipeline && npm publish --access public"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.5",
