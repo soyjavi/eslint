@@ -1,4 +1,4 @@
-# lookiero-lint-front
+# @soyjavi/eslint
 
 ### Package.json devDependencies in your host project
 
