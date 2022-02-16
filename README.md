@@ -3,8 +3,6 @@
 ### Package.json devDependencies in your host project
 
 ```
-"@typescript-eslint/eslint-plugin": "^3.5",
-"@typescript-eslint/parser": "^4.22",
 "eslint": "^7.3",
 "eslint-config-prettier": "^6.11",
 "eslint-plugin-babel": "^5.3",

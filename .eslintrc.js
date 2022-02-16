@@ -1,6 +1,5 @@
 const ORDER_RULES = require("./rules/order");
 const REACT_RULES = require("./rules/react");
-const TYPESCRIPT_RULES = require("./rules/typescript");
 
 const PLUGINS = ["import", "prettier", "react", "react-hooks"];
 
@@ -10,13 +9,11 @@ module.exports = {
     node: true,
     jest: true,
   },
-  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2020,
-    project: "./tsconfig.json",
+    ecmaVersion: "latest",
     sourceType: "module",
   },
 
@@ -30,18 +27,6 @@ module.exports = {
       ],
       plugins: ["babel", ...PLUGINS],
       rules: { ...REACT_RULES, ...ORDER_RULES },
-    },
-    {
-      files: ["*.tsx", ".ts"],
-      extends: [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "prettier/@typescript-eslint",
-        "plugin:prettier/recommended",
-      ],
-      plugins: ["@typescript-eslint", ...PLUGINS],
-      rules: { ...TYPESCRIPT_RULES, ...REACT_RULES, ...ORDER_RULES },
     },
   ],
 
